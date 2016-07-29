@@ -8,13 +8,26 @@
 	<style type="text/css">
 		.demo-header{
 			height: 200px;
-			color: #fff;
+			 color: #f35626;
+		        background: -webkit-linear-gradient(#42ddec 0%, #fff 100%);
+		        background: -o-linear-gradient(#42ddec 0%, #fff 100%);
+		        background: linear-gradient(#42ddec 0%, #fff 100%);
 			padding: 50px;
-			background: linear-gradient(to bottom,#3bbbc1 0,#3fdacc 100%);
+			
+		}
+		h1,h4{
+			    background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+    			-webkit-background-clip: text;
+    			-webkit-text-fill-color: transparent;
+    			 -webkit-animation: hue 60s infinite linear; 
+		}
+		h1{
+			font-size: 60px;
 		}
 		.btn-container{
 			width:70%;
 			margin:30px auto;
+
 
 		}
 		.demo-container{
@@ -23,16 +36,29 @@
 			padding: 20px;
 			
 		}
+		.btn{
+			width:120px;
+		}
 		.code-container{
 			padding: 20px;
 			background: #eee;
 			color: #444;
 		}
+
+		@-webkit-keyframes hue {
+  			from {
+   			 -webkit-filter: hue-rotate(0deg);
+ 			 }
+
+  			to {
+   			 -webkit-filter: hue-rotate(-360deg);
+  			}
+}
 	</style>
 </head>
 <body>
 	<section class="demo-header">
-		<h2>Notifier</h2>
+		<h1>Notifier</h1>
 		<h4>This is a JQuery plugin which used to show notifactions=^_^=</h4>
 	</section>
 	<section class="btn-container">
