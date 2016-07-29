@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>notifier-demo</title>
+	<link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+	<link href="css/notifier.css" rel="stylesheet" />
+	<style type="text/css">
+		.demo-header{
+			height: 200px;
+			color: #fff;
+			padding: 50px;
+			background: linear-gradient(to bottom,#3bbbc1 0,#3fdacc 100%);
+		}
+		.btn-container{
+			width:70%;
+			margin:30px auto;
+
+		}
+		.demo-container{
+			width:70%;
+			margin:30px auto;
+			padding: 20px;
+			
+		}
+		.code-container{
+			padding: 20px;
+			background: #eee;
+			color: #444;
+		}
+	</style>
+</head>
+<body>
+	<section class="demo-header">
+		<h2>Notifier</h2>
+		<h4>This is a JQuery plugin which used to show notifactions=^_^=</h4>
+	</section>
+	<section class="btn-container">
+		<h3>Just click those buttons to see the </h3>
+	<div class="row">
+	<div class="col-md-2">
+		<button id="infoBtn" class="btn btn-primary">info notice</button>
+	</div>
+	<div class="col-md-2">
+		<button id="warningBtn" class="btn btn-warning">warning notice</button>
+	</div>
+	<div class="col-md-2">
+		<button id="dangerBtn" class="btn btn-danger">danger notice</button>
+	</div>
+	<div class="col-md-2">
+		<button id="successBtn" class="btn btn-success">success notice</button>
+	</div>
+	<div class="col-md-2">
+		<button id="reminderBtn" class="btn btn-info">reminder notice</button>
+	</div>
+	<div class="col-md-2">
+		<button id="todoBtn" class="btn btn-default">todo notice</button>
+	</div>
+	</div>
+	</section>
+	<section class="demo-container">
+		<h3>How to use it</h3>
+		<p>
+			It just need one line of code to introduce notifier into your project.<br/>
+			paramters:<br/>
+			-- type:what kind of notification would you like to show. there are five types: info, warning, danger, success, reminder, todo.<br/>
+			-- notification header <br/>
+			-- notification content<br/>
+			-- duration: if user doesn't close the notice, how long does the notice message display on the screen. 
+
+		</p>
+		<div class="code-container">
+		<code>
+			$('#infoBtn').click(function(){<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;$.notifier('info','info header','I am info notic message','6000');<br/>
+			});
+		</code>
+		</div>
+	</section>
+	<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="js/notifier.js"></script>
+	<script>
+		$(function(){
+			$('#infoBtn').click(function(){
+				$.notifier('info','info header','I am info notic message','10000');
+			});
+			$('#warningBtn').click(function(){
+				$.notifier('warning','Warning header','I am a warning notic message','10000');
+			});
+			$('#dangerBtn').click(function(){
+				$.notifier('danger','Danger notice header','I am a danger notic message','10000');
+			});
+			$('#successBtn').click(function(){
+				$.notifier('success','Success header','I am a success notic message','10000');
+			});
+			$('#reminderBtn').click(function(){
+				$.notifier('reminder','Reminder header','I am a reminder message','10000');
+			});
+			$('#todoBtn').click(function(){
+				$.notifier('todo','Todo hdaer','I am a todo message','10000');
+			});
+		});
+	</script>
+</body>
+</html>
